@@ -18,7 +18,7 @@ password = config["VK"]["token"]
 def get_photos(input_):
     time.sleep(0.33)
     photo_url = 'https://api.vk.com/method/photos.get'
-    params = {'access_token': password, 'v': '5.131', 'owner_id': input_, 'album_id': 'wall', 'extended': 1}
+    params = {'access_token': password, 'v': '5.131', 'owner_id': input_, 'album_id': 'profile', 'extended': 1}
     resp = requests.get(photo_url, params=params).json()
     resp = resp['response']['items']
     name_dict = []
